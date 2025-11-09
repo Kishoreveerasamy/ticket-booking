@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./components/Auth";
 import Layout from "./components/Layout";
 import Index from "./components/Index";
@@ -12,7 +12,7 @@ import "./App.css";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <Layout>
           <Routes>
@@ -27,6 +27,7 @@ export default function App() {
           </Routes>
         </Layout>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
+
   );
 }
